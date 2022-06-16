@@ -5,9 +5,9 @@ export default function NavBar() {
   return (
     <nav className={styles.navMain}>
       <ul className={styles.navList}>
-        <a href="/">Pinturas</a>
-        <a href="/">Escaleras</a>
-        <a href="/">Herramientas</a>
+        <a href="/">Servicios</a>
+        <a href="/">Contactos</a>
+        <a href="/">Sucursales</a>
           <CartWidget />
       </ul>
     
