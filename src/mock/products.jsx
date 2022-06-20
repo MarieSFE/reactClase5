@@ -5,7 +5,8 @@ export const productos = [
         "marca": "estantec",        
         "TipoDeProducto": "Estanterias",
         "Precio": "6000",        
-        "image": "./images/Estazul.jpg"
+        "image": "./images/Estazul.jpg",
+        
         
     },
     {
