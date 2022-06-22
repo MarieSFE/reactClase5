@@ -1,15 +1,25 @@
 import React, {useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
 import productos from "../../mock/products.json";
 import ItemList from "../ItemList/ItemList";
+
 
 const ItemListContainer = ({saludo})=> {
 
   const [products,setProducts] = useState ([]);
+  const {categoryId} = useParams();
 
   useEffect (() =>{
     const traerProductos = new Promise ((res, rej) =>{
       setTimeout(()=>{
-        res (productos);
+        if(categoryId === undefined)
+          res (productos);
+        else{
+          const itemsFound= productos.filter(objetos => {
+            return objetos.category ===categoryId;
+          })
+          res (itemsFound);
+        }
       }, 2000);
     });
     //console.log(traerProductos);
@@ -25,6 +35,8 @@ const ItemListContainer = ({saludo})=> {
     <>
       <div> {saludo}</div>
       <ItemList items={productos}/>
+      <a href="/item"> ir a url detalle</a>
+      <a href="/counting"> ir a url counting</a>
       
     </>
     

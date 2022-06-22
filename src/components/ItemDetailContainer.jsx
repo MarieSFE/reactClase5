@@ -1,16 +1,19 @@
 import React, {useState, useEffect} from "react";
 import productos from "../mock/products.json";
 import ItemDetail from "./ItemDetail";
-
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = ({saludo})=> {
 
   const [product, setProduct] = useState ({});
+  const { id } = useParams();
+  console.log("parametros: ", id)
 
   useEffect (() => {
     const traerProducto = new Promise ((res, rej) =>{
       setTimeout(()=>{
-        res (productos [1]);
+        let itemNumber= parseInt(id)
+        res (productos [itemNumber]);
       }, 2000);
     });
     //console.log(traerProductos);
