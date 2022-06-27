@@ -15,8 +15,8 @@ const ItemListContainer = ({saludo})=> {
         if(categoryId === undefined)
           res (productos);
         else{
-          const itemsFound= productos.filter(objetos => {
-            return objetos.category ===categoryId;
+          const itemsFound= productos.filter(category => {
+            return category.category === categoryId;
           })
           res (itemsFound);
         }
