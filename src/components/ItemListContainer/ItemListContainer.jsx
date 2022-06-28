@@ -29,6 +29,8 @@ const ItemListContainer = ({saludo})=> {
 
   }, []);
 
+  /*return id ? item.filter((item) => item.categotyId === id) : item*/
+
   console.log(products)
 
   return (
