@@ -28,7 +28,7 @@ function App() {
   const [isAddedToCart, setAddedToCart]= useState(false);
 
   function handleOnAdd() {
-      console.log("items agregados=", cant);
+      console.log("items agregados=");
       setAddedToCart(true);
     }
   
