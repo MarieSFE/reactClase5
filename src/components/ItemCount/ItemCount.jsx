@@ -2,7 +2,7 @@
 /* Importamos el Hook de estado */
 import {useState} from 'react';
 
-const ItemCount = ({ initial, stock }) => {
+const ItemCount = ({ initial, stock, onAdd }) => {
   /* Definimos el estado con useState */
   const [count, setCount] = useState(initial);
 
@@ -36,6 +36,8 @@ const ItemCount = ({ initial, stock }) => {
       <button onClick={suma}> + </button>
       <br />
       <button>Agregar al carrito</button>
+      <br/>
+      <button onClick ={onAdd}>Terminar Compra</button>
     </div>
   );
 }

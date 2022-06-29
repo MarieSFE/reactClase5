@@ -14,7 +14,7 @@ function App() {
 
       }
   
-  function   handleKeyDown(evt) {
+   {/*function   handleKeyDown(evt) {
     const arrayVocales = 'aeiou'.split('');    
 
     console.log (evt.key);
@@ -22,7 +22,13 @@ function App() {
      if (arrayVocales.includes(evt.key))
       evt.preventDefault();
     
-  }
+  } */}
+
+  
+  function handleOnAdd() {
+      console.log("on add handler")
+    }
+  
 
   return (
     <div className="App"> 
@@ -35,17 +41,17 @@ function App() {
                 
             <Route path="/item/:id" element={<ItemDetailContainer greet= "Detalle del producto"/>}></Route>          
              
-            <Route path="/counting" element={<ItemCount stock={5} initial={1}/>}></Route>  
+            <Route path="/counting" element={<ItemCount onAdd={handleOnAdd} stock={5} initial={1}/>}></Route>  
 
             <Route path="/category/:categoryId" element={<ItemListContainer greet= "Categoria de Items"/>}></Route>    
         </Routes>
      </BrowserRouter>
 
-     <form>
+     {/*<form>
       <input onHeyDown ={handleKeyDown}
       placeholder = "hola"></input>
       <button onClick={handleSubmit}>SUBMIT</button>
-     </form>
+  </form>*/}
 
     </div>
   );
