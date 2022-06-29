@@ -20,7 +20,9 @@ const ItemListContainer = ({saludo})=> {
           })
           res (itemsFound);
         }
-      }, 2000);
+         /*return productos ? productos.filter((category) => category.category === categoryId) : productos*/
+        
+        }, 2000);
     });
     //console.log(traerProductos);
     traerProductos.then ((res)=> {
@@ -36,7 +38,7 @@ const ItemListContainer = ({saludo})=> {
   return (
     <>
       <div> {saludo}</div>
-      <ItemList items={productos}/>
+      <ItemList items={products}/>
       <a href="/item"> ir a url detalle</a>
       <a href="/counting"> ir a url counting</a>
       
