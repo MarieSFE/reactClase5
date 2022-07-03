@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "stock": 5,
         "name": "Estanteria Azul",
         "marca": "estantec",        
         "category": "Estanterias",
