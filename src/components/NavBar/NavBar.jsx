@@ -8,7 +8,7 @@ export default function NavBar() {
       <ul className={styles.navList}>
         <NavLink to= "/">Productos</NavLink>
         <NavLink to= "/detalle">detalle</NavLink>
-        <NavLink to= "/counting">counting</NavLink>
+        
         <NavLink to= "/category/Estanterias">Estanterias</NavLink>
         <NavLink to= "/category/Pinturas">Pinturas</NavLink>
         <NavLink to= "/category/Escaleras">Escaleras</NavLink>
