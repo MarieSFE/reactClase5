@@ -20,9 +20,7 @@ function App() {
         <Routes>
             <Route path="/" element={<ItemListContainer greet="Bienvenido a Ferreteria Leal" />}></Route>      
                 
-            <Route path="/item/:id" element={<ItemDetailContainer greet= "Detalle del producto"/>}></Route>          
-             
-           
+            <Route path="/item/:id" element={<ItemDetailContainer greet= "Detalle del producto"/>}></Route>                   
 
             <Route path="/category/:categoryId" element={<ItemListContainer greet= "Categoria de Items"/>}></Route> 
 
